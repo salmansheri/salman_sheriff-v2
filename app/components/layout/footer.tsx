@@ -1,10 +1,13 @@
 import { navItems } from "~/lib/constant.ts";
-import { ArrowRight, ArrowRightCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900/90 backdrop-blur-lg backdrop-saturate-150">
+    <footer
+      id="contact"
+      className="bg-slate-900/90 backdrop-blur-lg backdrop-saturate-150"
+    >
       <div className="container">
         <div className="py-16 grid md:grid-cols-3 md:items-center">
           <div className="md:col-span-2">

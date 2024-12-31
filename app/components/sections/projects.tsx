@@ -3,7 +3,7 @@ import { ArrowBigRight } from "lucide-react";
 
 const Projects = () => {
   return (
-    <section className="min-h-dvh">
+    <section className="min-h-dvh py-20" id="projects">
       <div className="container">
         <h2 className="text-4xl md:text-5xl lg:text-6xl">Selected works</h2>
         <div className="mt-10">

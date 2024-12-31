@@ -5,14 +5,14 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { motion } from "motion/react";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full",
+  "inline-flex group/button items-center relative justify-center gap-2 whitespace-nowrap rounded-full",
   {
     variants: {
       variant: {
         default:
           "border border-pink-500/10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500",
         secondary: "bg-slate-300 text-slate-900",
-        text: "",
+        text: "h-auto px-0 border-transparent after:transition-all after:duration-500 after:content-[''] after:h-px after:w-0 after:absolute after:top-full after:bg-violet-500 hover:after:w-full",
       },
       size: {
         default: "px-4 py-2",
