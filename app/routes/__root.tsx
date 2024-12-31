@@ -7,7 +7,7 @@ import {
 import { Meta, Scripts } from "@tanstack/start";
 import type { ReactNode } from "react";
 import GlobalCss from "~/global.css?url";
-import '@fontsource-variable/archivo';
+import "@fontsource-variable/archivo";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -31,7 +31,7 @@ export const Route = createRootRoute({
     ],
   }),
   component: RootComponent,
-  notFoundComponent: () => <div>Not Found</div>
+  notFoundComponent: () => <div>Not Found</div>,
 });
 
 function RootComponent() {
@@ -45,7 +45,7 @@ function RootComponent() {
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html>
-    <head>
+      <head>
         <Meta />
       </head>
       <body className="bg-slate-950 antialiased text-slate-200">
