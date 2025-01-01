@@ -1,5 +1,5 @@
 import { ArrowDown } from "lucide-react";
-import MyPhoto from "../../../assets/images/my_photo_transparent_Craiyon.png";
+import MyPhoto from "../../../assets/images/my_photo.jpg";
 import Button from "~/components/ui/button.tsx";
 import {
   motion,
@@ -112,7 +112,7 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
-      <div ref={scrollingDiv} className="h-[200vh]"></div>
+      <div ref={scrollingDiv} className="md:h-[200vh]"></div>
     </section>
   );
 };
