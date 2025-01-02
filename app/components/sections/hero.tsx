@@ -39,6 +39,26 @@ const Hero = () => {
       },
     );
   }, []);
+
+  const handleProjectsClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+
+    const url = new URL(event.currentTarget.href);
+    const hash = url.hash;
+    const target = document.querySelector(hash);
+    if (!target) return;
+    target.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleContactClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+
+    const url = new URL(event.currentTarget.href);
+    const hash = url.hash;
+    const target = document.querySelector(hash);
+    if (!target) return;
+    target.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <section className="min-h-dvh pt-20" id="home">
       <div className="container sticky top-0 grid md:h-screen items-stretch !max-w-full md:grid-cols-12">
@@ -67,15 +87,17 @@ const Hero = () => {
                 delay: 2.75,
               }}
             >
-              <Button variant="secondary">
-                <span>View My Work</span>
-                <div className="overflow-hidden size-5">
-                  <div className="h-5 w-10 flex grop-hover/button:-translate-x-1/2 transition transform duration-500">
-                    <ArrowDown className="size-4" />
-                    <ArrowDown className="size-4" />
+              <a href="#projects" onClick={handleProjectsClick}>
+                <Button variant="secondary">
+                  <span>View My Work</span>
+                  <div className="overflow-hidden size-5">
+                    <div className="h-5 w-10 flex grop-hover/button:-translate-x-1/2 transition transform duration-500">
+                      <ArrowDown className="size-4" />
+                      <ArrowDown className="size-4" />
+                    </div>
                   </div>
-                </div>
-              </Button>
+                </Button>
+              </a>
             </motion.div>
 
             <motion.div
@@ -92,7 +114,9 @@ const Hero = () => {
                 delay: 3.2,
               }}
             >
-              <Button variant="text">Let&apos;s Talk</Button>
+              <a href="#contact" onClick={handleContactClick}>
+                <Button variant="text">Let&apos;s Talk</Button>
+              </a>
             </motion.div>
           </div>
         </div>

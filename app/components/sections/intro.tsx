@@ -6,6 +6,7 @@ const Intro = () => {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, {
     once: true,
+    amount: 0.5,
   });
 
   useEffect(() => {
@@ -24,7 +25,7 @@ const Intro = () => {
         },
         {
           duration: 0.5,
-          delay: stagger(0.5),
+          delay: stagger(0.2),
         },
       );
     }
