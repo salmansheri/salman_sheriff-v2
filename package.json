@@ -2,6 +2,7 @@
   "name": "salman-sheriff",
   "module": "index.ts",
   "type": "module",
+  "homepage": "./",
   "scripts": {
     "dev": "vinxi dev",
     "build": "vinxi build",
